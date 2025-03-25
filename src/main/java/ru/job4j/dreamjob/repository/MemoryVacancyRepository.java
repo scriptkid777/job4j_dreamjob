@@ -13,12 +13,12 @@ public class MemoryVacancyRepository implements VacancyRepository {
 
     private int nextId = 1;
 
-    private final Map<Integer,Vacancy> vacancies = new HashMap<>();
+    private final Map<Integer, Vacancy> vacancies = new HashMap<>();
 
     private MemoryVacancyRepository() {
         save(new Vacancy(0, "Intern Java Developer", "description for Intern Java Developer"));
-        save(new Vacancy(0, "Junior Java Developer","description for Junior Java Developer"));
-        save(new Vacancy(0, "Junior+ Java Developer","description for Junior+ Java Developer"));
+        save(new Vacancy(0, "Junior Java Developer", "description for Junior Java Developer"));
+        save(new Vacancy(0, "Junior+ Java Developer", "description for Junior+ Java Developer"));
         save(new Vacancy(0, "Middle Java Developer", "description for Middle Java Developer"));
         save(new Vacancy(0, "Middle+ Java Developer", "description for Middle+ Java Developer"));
         save(new Vacancy(0, "Senior Java Developer", "description for Senior Java Developer"));

@@ -12,6 +12,7 @@ import ru.job4j.dreamjob.repository.VacancyRepository;
 @RequestMapping("/vacancies") /* Работать с кандидатами будем по URI /vacancies/** */
 public class VacancyController {
     private final VacancyRepository vacancyRepository = MemoryVacancyRepository.getInstance();
+
     @GetMapping
     public String getAll(Model model) {
         model.addAttribute("vacancies", vacancyRepository.findAll());
