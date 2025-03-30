@@ -5,9 +5,9 @@ import java.util.Objects;
 
 public class Candidate {
     private int id;
-  private String name;
-    String description;
-    LocalDateTime creationDate;
+    private String name;
+    private String description;
+    private LocalDateTime creationDate;
 
     public Candidate(int id, String name, String description) {
         this.id = id;
