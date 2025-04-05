@@ -3,13 +3,17 @@ package ru.job4j.dreamjob.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Vacancy {
-    String description;
+    public class Vacancy {
+        private int id;
 
-    LocalDateTime creationDate;
-    private int id;
+        private String title;
 
-    private String title;
+        private String description;
+
+        private LocalDateTime creationDate = LocalDateTime.now();
+
+        public Vacancy() {
+        }
 
     public Vacancy(int id, String title, String description) {
         this.id = id;
