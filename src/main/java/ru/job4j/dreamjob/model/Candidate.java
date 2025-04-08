@@ -4,23 +4,27 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Candidate {
-    private int id;
+    private Integer id;
     private String name;
-    private String description;
-    private LocalDateTime creationDate;
 
-    public Candidate(int id, String name, String description) {
+    private String description;
+
+    private LocalDateTime creationDate = LocalDateTime.now();
+
+    public Candidate() {
+    }
+
+    public Candidate(Integer id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.creationDate = LocalDateTime.now();
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
