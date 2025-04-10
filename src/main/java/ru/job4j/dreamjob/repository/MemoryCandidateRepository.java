@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+@Repository
 public class MemoryCandidateRepository implements CandidateRepository {
-    private static final MemoryCandidateRepository INSTANCE = new MemoryCandidateRepository();
 
     private int nextId = 1;
 
@@ -19,10 +19,6 @@ public class MemoryCandidateRepository implements CandidateRepository {
         save(new Candidate(0, "Sergey", "I am Intern Java Developer"));
         save(new Candidate(0, "Alex", "I am Middle Java Developer"));
         save(new Candidate(0, "Petr", "I am Senior Java Developer"));
-    }
-
-    public static MemoryCandidateRepository getInstance() {
-        return INSTANCE;
     }
 
     @Override
