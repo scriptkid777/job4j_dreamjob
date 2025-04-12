@@ -11,18 +11,28 @@ import java.util.Objects;
         private String description;
 
         private LocalDateTime creationDate = LocalDateTime.now();
+        private boolean visible;
 
         public Vacancy() {
         }
 
-    public Vacancy(int id, String title, String description) {
+    public Vacancy(int id, String title, String description, boolean visible) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.creationDate = LocalDateTime.now();
+        this.visible = visible;
     }
 
-    public String getDescription() {
+        public boolean getVisible() {
+            return visible;
+        }
+
+        public void setVisible(boolean visible) {
+            this.visible = visible;
+        }
+
+        public String getDescription() {
         return description;
     }
 
