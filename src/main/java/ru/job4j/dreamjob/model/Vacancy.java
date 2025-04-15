@@ -12,16 +12,18 @@ import java.util.Objects;
 
         private LocalDateTime creationDate = LocalDateTime.now();
         private boolean visible;
+        private int cityId;
 
         public Vacancy() {
         }
 
-    public Vacancy(int id, String title, String description, boolean visible) {
+    public Vacancy(int id, String title, String description, boolean visible, int cityId) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.creationDate = LocalDateTime.now();
         this.visible = visible;
+        this.cityId = cityId;
     }
 
         public boolean getVisible() {
@@ -64,7 +66,15 @@ import java.util.Objects;
         this.title = title;
     }
 
-    @Override
+        public int getCityId() {
+            return cityId;
+        }
+
+        public void setCityId(int cityId) {
+            this.cityId = cityId;
+        }
+
+        @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
