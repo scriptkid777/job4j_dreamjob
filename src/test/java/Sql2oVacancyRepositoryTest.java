@@ -9,11 +9,13 @@ import ru.job4j.dreamjob.model.Vacancy;
 import ru.job4j.dreamjob.repository.Sql2oFileRepository;
 import ru.job4j.dreamjob.repository.Sql2oVacancyRepository;
 
+import java.util.List;
 import java.util.Properties;
 
 import static java.time.LocalDateTime.now;
-import java.time.temporal.ChronoUnit;;
+import java.time.temporal.ChronoUnit;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 public class Sql2oVacancyRepositoryTest {
     private static Sql2oVacancyRepository sql2oVacancyRepository;
 
@@ -60,4 +62,15 @@ public class Sql2oVacancyRepositoryTest {
         var savedVacancy = sql2oVacancyRepository.findById(vacancy.getId()).get();
         assertThat(savedVacancy).usingRecursiveComparison().isEqualTo(vacancy);
     }
+
+    @Test
+    public void whenSaveSeveralThenGetAll() {
+        var creationDate = now().truncatedTo(ChronoUnit.MINUTES);
+        var vacancy1 = sql2oVacancyRepository.save(new Vacancy(0, "title1", "description1", creationDate, true, 1, file.getId()));
+        var vacancy2 = sql2oVacancyRepository.save(new Vacancy(0, "title2", "description2", creationDate, false, 1, file.getId()));
+        var vacancy3 = sql2oVacancyRepository.save(new Vacancy(0, "title3", "description3", creationDate, true, 1, file.getId()));
+        var result = sql2oVacancyRepository.findAll();
+        assertThat(result).isEqualTo(List.of(vacancy1, vacancy2, vacancy3));
+    }
+
 }
