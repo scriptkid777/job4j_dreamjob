@@ -1,21 +1,21 @@
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.job4j.dreamjob.configuration.DatasourceConfiguration;
 import ru.job4j.dreamjob.model.File;
 import ru.job4j.dreamjob.model.Vacancy;
-
 import ru.job4j.dreamjob.repository.Sql2oFileRepository;
 import ru.job4j.dreamjob.repository.Sql2oVacancyRepository;
 
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Properties;
 
 import static java.time.LocalDateTime.now;
-import java.time.temporal.ChronoUnit;
+import static java.util.Collections.emptyList;
+import static java.util.Optional.empty;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-
 public class Sql2oVacancyRepositoryTest {
     private static Sql2oVacancyRepository sql2oVacancyRepository;
 
