@@ -106,6 +106,4 @@ public class Sql2oCandidateRepositoryTest {
         var isUpdated = sql2oCandidateRepository.update(candidate);
         assertThat(isUpdated).isFalse();
     }
-
-
 }
