@@ -16,6 +16,7 @@ import static java.time.LocalDateTime.now;
 import static java.util.Collections.emptyList;
 import static java.util.Optional.empty;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 public class Sql2oVacancyRepositoryTest {
     private static Sql2oVacancyRepository sql2oVacancyRepository;
 
@@ -73,4 +74,40 @@ public class Sql2oVacancyRepositoryTest {
         assertThat(result).isEqualTo(List.of(vacancy1, vacancy2, vacancy3));
     }
 
+    @Test
+    public void whenDontSaveThenNothingFound() {
+        assertThat(sql2oVacancyRepository.findAll()).isEqualTo(emptyList());
+        assertThat(sql2oVacancyRepository.findById(0)).isEqualTo(empty());
+    }
+
+    @Test
+    public void whenDeleteThenGetEmptyOptional() {
+        var creationDate = now().truncatedTo(ChronoUnit.MINUTES);
+        var vacancy = sql2oVacancyRepository.save(new Vacancy(0, "title", "description", creationDate, true, 1, file.getId()));
+        sql2oVacancyRepository.deleteById(vacancy.getId());
+        var savedVacancy = sql2oVacancyRepository.findById(vacancy.getId());
+        assertThat(savedVacancy).isEqualTo(empty());
+    }
+
+    @Test
+    public void whenUpdateThenGetUpdated() {
+        var creationDate = now().truncatedTo(ChronoUnit.MINUTES);
+        var vacancy = sql2oVacancyRepository.save(new Vacancy(0, "title", "description", creationDate, true, 1, file.getId()));
+        var updatedVacancy = new Vacancy(
+                vacancy.getId(), "new title", "new description", creationDate.plusDays(1),
+                !vacancy.getVisible(), 1, file.getId()
+        );
+        var isUpdated = sql2oVacancyRepository.update(updatedVacancy);
+        var savedVacancy = sql2oVacancyRepository.findById(updatedVacancy.getId()).get();
+        assertThat(isUpdated).isTrue();
+        assertThat(savedVacancy).usingRecursiveComparison().isEqualTo(updatedVacancy);
+    }
+
+    @Test
+    public void whenUpdateUnExistingVacancyThenGetFalse() {
+        var creationDate = now().truncatedTo(ChronoUnit.MINUTES);
+        var vacancy = new Vacancy(0, "title", "description", creationDate, true, 1, file.getId());
+        var isUpdated = sql2oVacancyRepository.update(vacancy);
+        assertThat(isUpdated).isFalse();
+    }
 }

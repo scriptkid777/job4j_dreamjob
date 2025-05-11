@@ -26,6 +26,16 @@ public class Candidate {
     public Candidate() {
     }
 
+    public Candidate(Integer id, String name, String description,
+                     LocalDateTime creationDate, Integer cityId, Integer fileId) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.creationDate = creationDate;
+        this.cityId = cityId;
+        this.fileId = fileId;
+    }
+
     public Candidate(Integer id, String name, String description, int cityId, int fileId) {
         this.id = id;
         this.name = name;
