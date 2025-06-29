@@ -91,3 +91,79 @@ VALUES (?, ?, ?, ?, ?)
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
 Table "CANDIDATES" not found; SQL statement:
 SELECT * FROM candidates [42102-214]
+2025-06-19 22:53:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
+2025-06-19 22:53:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+SELECT * FROM candidates [42102-214]
+2025-06-19 22:55:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
+2025-06-19 22:55:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+SELECT * FROM candidates [42102-214]
+2025-06-19 23:00:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
+2025-06-19 23:00:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+SELECT * FROM candidates [42102-214]
+2025-06-19 23:02:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
+2025-06-19 23:02:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+SELECT * FROM candidates [42102-214]
+2025-06-24 22:16:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
+2025-06-24 22:16:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+SELECT * FROM candidates [42102-214]
+2025-06-24 22:16:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
+2025-06-24 22:16:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+SELECT * FROM candidates [42102-214]
+2025-06-24 22:17:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
+2025-06-24 22:17:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+SELECT * FROM candidates [42102-214]
+2025-06-24 22:19:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "CANDIDATES" не найдена
+Table "CANDIDATES" not found; SQL statement:
+INSERT INTO candidates(name, description, creation_date, city_id, file_id)
+VALUES (?, ?, ?, ?, ?)
+ [42102-214]
