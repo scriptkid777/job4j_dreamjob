@@ -18,7 +18,6 @@ public class UserController {
         this.userService = userService;
     }
 
-
     @GetMapping("/register")
     public String getRegistrationPage() {
         return "users/register";

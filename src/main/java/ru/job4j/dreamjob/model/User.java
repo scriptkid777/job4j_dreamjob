@@ -19,7 +19,6 @@ public class User {
     public User() {
     }
 
-
     public User(Integer id, String email, String name, String password) {
         this.id = id;
         this.email = email;
