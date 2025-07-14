@@ -16,7 +16,6 @@ public class Sql2oUserRepositoryTest {
 
     private static Sql2o sql2o;
 
-
     @BeforeAll
     public static void initRepositories() throws IOException {
         var properties = new Properties();
