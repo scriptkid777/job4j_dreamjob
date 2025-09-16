@@ -138,7 +138,7 @@ public class CandidateControllerTest {
 
         when(candidateService.update(candidateArgumentCaptor.capture(), fileDtoArgumentCaptor.capture())).thenReturn(true);
         var model = new ConcurrentModel();
-        var view = controller.update(candidate,testFile, model);
+        var view = controller.update(candidate, testFile, model);
         var actualCandidate = candidateArgumentCaptor.getValue();
         var actualFileDto = fileDtoArgumentCaptor.getValue();
 

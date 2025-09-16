@@ -48,6 +48,7 @@ public class VacancyControllerTest {
         assertThat(view).isEqualTo("vacancies/list");
         assertThat(actualVacancies).isEqualTo(expectedVacancies);
     }
+
     @Test
     public void whenRequestVacancyCreationPageThenGetPageWithCities() {
         var city1 = new City(1, "Москва");
@@ -93,6 +94,7 @@ public class VacancyControllerTest {
         assertThat(view).isEqualTo("errors/404");
         assertThat(actualExceptionMessage).isEqualTo(expectedException.getMessage());
     }
+
     @Test
     void whenRequestVacancyByIdThenGetOnePageForEdit() {
         var vacancy = new Vacancy(1, "test1", "desc1", now(), true, 1, 2);
